@@ -1,0 +1,3 @@
+<app-tabla-paises [paises]="paises" (paisSeleccionado)="paisSeleccion($event)"></app-tabla-paises>
+<!--(actorSeleccionado)="mostrarActor($event)"-->
+<app-detalle-pais [pais]="paisSeleccionado" (deshabilitarPais)="borrar($event)"></app-detalle-pais>

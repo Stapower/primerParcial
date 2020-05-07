@@ -1,0 +1,50 @@
+<div class="card mb-4 shadow-sm">
+	<div class="card-header">
+		<h4 class="my-0 font-weight-normal">Alta de pelicula</h4>
+		<form class="form-style-7">
+			<ul>
+				<li>
+					<label for="name">Nombre de la pelicula</label>
+					<input type="text" name="name" [(ngModel)]="pelicula.nombre">
+					<span>nombre de la pelicula</span>
+					{{pelicula.nombre}}
+
+				</li>
+				<li>
+					<label for="tipo">Tipo</label>
+					<select id="cars" name="tipo" [(ngModel)]="pelicula.tipo">
+						<option value="Amor">Amor</option>
+						<option value="Terror">Terror</option>
+						<option value="Otro">Otro</option>
+					</select>
+				</li>
+				<li>
+					<label for="url">fecha De Estreno</label>
+					<input type="text" name="url" maxlength="100"  [(ngModel)]="pelicula.fechaDeEstreno">
+					<span>fecha De Estreno</span>
+				</li>
+				<li>
+					<label for="url">Espectadores</label>
+					<input type="text" name="url" maxlength="100"  [(ngModel)]="pelicula.publico">
+					<span>espectadores</span>
+				</li>
+				<span>No hay presupuesto para spinner, primero dar de alta la pelicula y despues seleccionar el actor (darle unos segundos por las llamadas a BD)</span>
+
+				<li>
+					<button type="button" class="btn btn-lg btn-block btn-primary" (click)="alta()">Alta</button>
+				</li>
+			</ul>
+		</form>
+	</div>
+	<!--div class="card-body">
+		<h1 class="card-title pricing-card-title"> <small class="text-muted"></small></h1>
+		<ul class="list-unstyled mt-3 mb-4">
+			<li><img src="pelicula.foto" width="250px" height="150px"> </li>
+		</ul>
+		<button type="button" class="btn btn-lg btn-block btn-primary" (click)="alta()">Alta</button>
+	</!--div-->
+</div>
+
+
+<app-listado (actorSeleccionadoFromList)="asignarActor($event)"></app-listado>
+<div (actorSeleccionado)="asignarActor($event)"></div>

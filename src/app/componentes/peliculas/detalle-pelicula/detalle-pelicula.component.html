@@ -1,0 +1,23 @@
+<div *ngIf="pelicula" class="card mb-4 shadow-sm" style="background-color: #454d55; color:white">
+	<div class="card-header">
+	  <h4 class="my-0 font-weight-normal">Nombre: {{pelicula.nombre}}</h4>
+	</div>
+	<div class="card-body">
+	  <h1 class="card-title pricing-card-title"> Tipo: {{pelicula.tipo}} <small class="text-muted"></small></h1>
+	  <ul class="list-unstyled mt-3 mb-4">
+		<li> Fecha estreno: {{pelicula.fechaDeEstreno}}	</li>
+	  </ul>
+	  <ul class="list-unstyled mt-3 mb-4">
+		<li> Publico:{{pelicula.publico}} 	</li>
+	  </ul>
+	  <ul class="list-unstyled mt-3 mb-4">
+		<li> Actor: {{actor.nombre}} {{actor.apellido}}	</li>
+		<img src="{{actor.foto}}" width="250px" height="150px">
+	  </ul>
+	  <ul class="list-unstyled mt-3 mb-4">
+		<li><img src="{{pelicula.foto}}" width="250px" height="150px"> 	</li>
+		<button type="button" class="btn btn-lg btn-block btn-primary" (click)="borrar(pelicula)">Borrar Pelicula</button>
+	  </ul>
+	  
+	</div>
+  </div>

@@ -1,0 +1,42 @@
+<link href='https://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
+<a  class="btn" (click)="redirectTo('/Actor/AltaActor')" >AltaActor</a>
+<a  class="btn"(click)="redirectTo('/Busqueda')" routerLink="/Busqueda">Busqueda</a>
+<!--a--  class="btn"(click)="redirectTo('/Bienvenida')" routerLink="/Bienvenida">Bienvenida</!--a-->
+<!--a  class="btn"(click)="redirectTo('/Actor/AltaActor')" routerLink="/Actor/AltaActor">AltaActor</!--a-->
+<a  class="btn"(click)="redirectTo('/Actor/ListadoActor')" routerLink="/Actor/ListadoActor">ListadoActor</a>
+<!--a  class="btn" (click)="redirectTo('/Actor/TablaActor')"routerLink="/Actor/TablaActor">TablaActor</!--a-->
+<a  class="btn" (click)="redirectTo('/Pelicula/AltaPeliculas')"routerLink="/Pelicula/AltaPeliculas">AltaPeliculas</a>
+<a  class="btn"(click)="redirectTo('/Pelicula/ListadoPeliculas')" routerLink="/Pelicula/ListadoPeliculas">ListadoPeliculas</a>
+<!--a  class="btn" (click)="redirectTo('/Pelicula/TablaPeliculas')"routerLink="/Pelicula/TablaPeliculas">TablaPeliculas</!--a-->
+<!--a  class="btn" (click)="redirectTo('/Pelicula/DetallePelicula')"routerLink="/Pelicula/DetallePelicula">DetallePelicula</!--a-->
+<a  class="btn"(click)="redirectTo('/Pais/listaPais')" routerLink="/Pelicula/ListadoPeliculas">Lista Pais</a>
+<a  class="btn"(click)="redirectTo('/Pais/tablaPais')" routerLink="/Pelicula/ListadoPeliculas">Tabla Pais</a>
+<a  class="btn"(click)="redirectTo('/Pais/detallePais')" routerLink="/Pelicula/ListadoPeliculas">Detalle Pais</a>
+
+<router-outlet></router-outlet>
+
+
+<!--app-listado-peliculas></!--app-listado-peliculas>
+
+<!--app-alta></!--app-alta-->
+<!--app-listado></!--app-listado>
+
+<!--
+	const MiRuteo = [
+  {path: 'Busqueda' , component: BusquedaComponent},
+  {path: 'Bienvenida' , component: BienvenidaComponent},
+  {path: 'Actor', component: BusquedaComponent,
+    children: [
+      {path: 'AltaActor' , component: AltaActorComponent},
+      {path: 'ListadoActor' , component: ListadoComponent},
+      {path: 'TablaActor' , component: TablaActorComponent}]
+  },
+  {path: 'Pelicula', component: BusquedaComponent,
+    children: [
+      {path: 'AltaPeliculas' , component: AltaComponent},
+      {path: 'ListadoPeliculas', component: ListadoPeliculasComponent},
+      {path: 'TablaPeliculas' , component: TablaPeliculaComponent},
+      {path: 'DetallePelicula' , component: DetallePeliculaComponent}
+    ]
+  }];
+-->

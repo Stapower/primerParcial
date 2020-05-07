@@ -1,0 +1,19 @@
+<div *ngIf="pais" class="card mb-4 shadow-sm" style="background-color: #454d55; color:white">
+	<div class="card-header">
+	  <h4 class="my-0 font-weight-normal">Pais: {{pais.name}}</h4>
+	</div>
+	<div class="card-body">
+	  <h1 class="card-title pricing-card-title"> Capital: {{pais.capital}} <small class="text-muted"></small></h1>
+	  <ul class="list-unstyled mt-3 mb-4">
+		<li> Populacion: {{pais.population}}	</li>
+	  </ul>
+	  <ul class="list-unstyled mt-3 mb-4">
+		<li> subregion :{{pais.subregion}} 	</li>
+	  </ul>
+	  <ul class="list-unstyled mt-3 mb-4">
+		<li><img src="{{pais.flag}}" width="250px" height="150px"> 	</li>
+		<button type="button" class="btn btn-lg btn-block btn-primary" (click)="borrar(pais)">Deshabilitar Pais</button>
+	  </ul>
+	  
+	</div>
+  </div>

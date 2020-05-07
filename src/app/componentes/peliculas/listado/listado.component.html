@@ -1,0 +1,3 @@
+<app-tabla-pelicula [peliculas]="peliculas" (peliculaSeleccionada)="mostrarPelicula($event)"></app-tabla-pelicula>
+
+<app-detalle-pelicula [pelicula]="peliculaSeleccionada" [actor]="actorRelacionadoALaPelicula" (borrarPelicula)="borrar($event)"></app-detalle-pelicula>

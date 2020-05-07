@@ -1,0 +1,89 @@
+Acor Alta
+<!--div class="card mb-4 shadow-sm">
+	<div class="card-header">
+		<h4 class="my-0 font-weight-normal">Crear actor </h4>
+	</div>
+	<div class="card-body">
+		<h1 class="card-title pricing-card-title"> Nombre: <small class="text-muted"></small></h1>
+		<ul class="list-unstyled mt-3 mb-4">
+			<li> <input type="text" [(ngModel)]="actor.nombre"> </li>
+		</ul>
+
+		<h1 class="card-title pricing-card-title"> apellido: <small class="text-muted"></small></h1>
+		<ul class="list-unstyled mt-3 mb-4">
+			<li> <input type="text" [(ngModel)]="actor.apellido"> </li>
+		</ul>
+
+		<h1 class="card-title pricing-card-title"> fechaDeNacimiento: <small class="text-muted"></small></h1>
+		<ul class="list-unstyled mt-3 mb-4">
+			<li> <input type="text" [(ngModel)]="actor.fechaDeNacimiento"> </li>
+		</ul>
+
+		<h1 class="card-title pricing-card-title"> sexo: <small class="text-muted"></small></h1>
+		<ul class="list-unstyled mt-3 mb-4">
+			<li> <input type="text" [(ngModel)]="actor.sexo"> </li>
+		</ul>
+
+		<h1 class="card-title pricing-card-title"> Pais: <small class="text-muted"></small></h1>
+		<ul class="list-unstyled mt-3 mb-4">
+			<li>
+			<label for="tipo">Tipo</label>
+			<select id="cars" name="tipo" [(ngModel)]="actor.pais" >
+				<option value="{{p.name}}" *ngFor="let p of paises">{{p.name}}</option>
+			</select>
+		</li>
+		</ul>
+
+		<button type="button" class="btn btn-lg btn-block btn-primary" (click)="crear()">Detalles</button>
+	</div>
+</!--div-->
+
+
+<div class="card mb-4 shadow-sm">
+	<div class="card-header">
+		<h4 class="my-0 font-weight-normal">Alta de Actor</h4>
+		<form class="form-style-7">
+			<ul>
+				<li>
+					<label for="name">Nombre </label>
+					<input type="text" name="name" [(ngModel)]="actor.nombre">
+					<span>nombre de la pelicula</span>
+				</li>
+				<li>
+					<label for="name">Apellido </label>
+					<input type="text" name="name" [(ngModel)]="actor.apellido">
+					<span>Apellido</span>
+				</li>
+				<li>
+					<label for="name">Fecha de Nacimiento </label>
+					<input type="text" name="name" [(ngModel)]="actor.fechaDeNacimiento">
+					<span>Fecha de Nacimiento</span>
+				</li>
+				<li>
+					<label for="tipo">Pais</label>
+					<select id="cars" name="tipo" [(ngModel)]="actor.pais">
+						<option value="{{p.name}}" *ngFor="let p of paises">{{p.name}}</option>
+					</select>
+				</li>
+				<li>
+					<label for="url">Sexo</label>
+					<input type="text" name="url" maxlength="100"  [(ngModel)]="actor.sexo">
+					<span>Sexo</span>
+				</li>
+				<!--span>No hay presupuesto para spinner, primero dar de alta la pelicula y despues seleccionar el actor (darle unos segundos por las llamadas a BD)</!--span-->
+
+				<li>
+					<button type="button" class="btn btn-lg btn-block btn-primary" (click)="crear()">Alta</button>
+				</li>
+			</ul>
+		</form>
+	</div>
+	<!--div class="card-body">
+		<h1 class="card-title pricing-card-title"> <small class="text-muted"></small></h1>
+		<ul class="list-unstyled mt-3 mb-4">
+			<li><img src="pelicula.foto" width="250px" height="150px"> </li>
+		</ul>
+		<button type="button" class="btn btn-lg btn-block btn-primary" (click)="alta()">Alta</button>
+	</!--div-->
+</div>
+<app-tabla-paises [paises]="paises"></app-tabla-paises>
