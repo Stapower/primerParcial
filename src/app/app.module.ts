@@ -24,6 +24,7 @@ import { ListadoPaisesComponent } from './paises/listado-paises/listado-paises.c
 import { TablaPaisesComponent } from './paises/tabla-paises/tabla-paises.component';
 import { HttpClientModule }    from '@angular/common/http';
 import { DetallePaisComponent } from './paises/detalle-pais/detalle-pais.component';
+import { DetalleActorComponent } from './componentes/actor/detalle-actor/detalle-actor.component';
 
 
 
@@ -41,7 +42,8 @@ import { DetallePaisComponent } from './paises/detalle-pais/detalle-pais.compone
     AltaActorComponent,
     ListadoPaisesComponent,
     TablaPaisesComponent,
-    DetallePaisComponent  ],
+    DetallePaisComponent,
+    DetalleActorComponent  ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(firebaseConfig.firebase),

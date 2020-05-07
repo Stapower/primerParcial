@@ -86,4 +86,5 @@ Acor Alta
 		<button type="button" class="btn btn-lg btn-block btn-primary" (click)="alta()">Alta</button>
 	</!--div-->
 </div>
-<app-tabla-paises [paises]="paises"></app-tabla-paises>
+
+<app-tabla-paises [paises]="paises" (paisSeleccionado)="paisSeleccion($event)"></app-tabla-paises>

@@ -14,6 +14,8 @@ export class ListadoComponent implements OnInit {
 
    @Output() actorSeleccionadoFromList = new EventEmitter();
 
+   actorSeleccionadoVariable;
+
   ngOnInit(): void {
     this.databseConnection.bringEntity(DataBaseConnectionService.actores, this.actores);
   }
@@ -62,6 +64,7 @@ f. Foto
     console.log("actorSelecccionado", event);
     this.actorSelecccionado = event;
     this.actorSeleccionadoFromList.emit(event);
+    this.actorSeleccionadoVariable = event;
   }
 
   borrar(event){
