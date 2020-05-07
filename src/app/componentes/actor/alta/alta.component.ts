@@ -20,8 +20,9 @@ export class AltaActorComponent implements OnInit {
     "pais": "",
     "flag": ""
   }
-actores
+  actores;
   paises = new Array();
+  paisSeleccionado;
 
   ngOnInit(): void {
     this.databseConnection.getlist(DataBaseConnectionService.url, this.paises);
@@ -35,8 +36,11 @@ actores
 
   paisSeleccion(pais){
     console.log("paisSeleccion", pais);
+    this.paisSeleccionado = pais;
     this.actor.pais = pais.name;
     this.actor.flag = pais.flag;
   }
+
+  
 
 }
